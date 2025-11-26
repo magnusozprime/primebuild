@@ -683,5 +683,17 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
     </script>
+    <script>
+// Prevent right-click
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Prevent F12 & Ctrl+Shift+I
+document.addEventListener('keydown', e => {
+    if (e.key === "F12" || 
+       (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i')) {
+        e.preventDefault();
+    }
+});
+</script>
 </body>
 </html>
