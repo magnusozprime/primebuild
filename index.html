@@ -1220,35 +1220,34 @@ h4 {
                 </div>
             </div>
 
-<div class="footer-box">
+<!-- 4. Call Back Form (AJAX Version) -->
+            <div class="footer-box">
                 <h4>কল ব্যাক রিকোয়েস্ট</h4>
                 
-                <form class="contact-form" action="https://formspree.io/f/mnnkddzy" method="POST">
+                <!-- Added ID "my-form" -->
+                <form id="my-form" class="contact-form" action="https://formspree.io/f/mnnkddzy" method="POST">
                     
-                    <!-- Name Field -->
                     <input type="text" name="name" placeholder="আপনার নাম" required>
-                    
-                    <!-- Phone Field (Most Important) -->
                     <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
-                    
-                    <!-- Hidden Subject Line for your Email -->
                     <input type="hidden" name="_subject" value="New Call Back Request - Meghna Builders">
                     
-                    <button type="submit">জমা দিন <i class="fas fa-paper-plane" style="margin-left:5px;"></i></button>
+                    <button type="submit" id="my-form-button">জমা দিন <i class="fas fa-paper-plane" style="margin-left:5px;"></i></button>
                 </form>
                 
-                <p style="font-size:0.8rem; color:#64748b; margin-top:10px;">
+                <!-- Status Message Area -->
+                <p id="my-form-status" style="font-size:0.9rem; margin-top:10px;"></p>
+
+                <p style="font-size:0.8rem; color:#64748b; margin-top:5px;">
                     আপনার নম্বর দিন, আমরাই কল করবো।
                 </p>
             </div>
-
-        </div>
         
-        <!-- Copyright -->
-        <div style="border-top:1px solid #334155; margin-top:50px; padding-top:20px; text-align:center; color:#64748b; font-size:0.9rem;">
+
+    </div>
+            <!-- Copyright -->
+            <div style="border-top:1px solid #334155; margin-top:50px; padding-top:20px; text-align:center; color:#64748b; font-size:0.9rem;">
             © 2025 Meghna Home Builders Ltd. | All rights reserved.
         </div>
-    </div>
 </footer>
 
 
@@ -1320,6 +1319,46 @@ h4 {
             if (menu) menu.classList.remove('active');
         });
     });
+    
+    
+    
+    
+    // --- FORMSPREE AJAX SUBMISSION ---
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+        event.preventDefault(); // This stops the redirect!
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Success Message (Green)
+                status.innerHTML = '<span style="color:#4ade80"><i class="fas fa-check-circle"></i> রিকোয়েস্ট পাঠানো হয়েছে!</span>';
+                form.reset(); // Clear the inputs
+            } else {
+                // Error Message (Red)
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        status.innerHTML = '<span style="color:#f87171">সমস্যা হয়েছে, আবার চেষ্টা করুন।</span>';
+                    }
+                });
+            }
+        }).catch(error => {
+            status.innerHTML = '<span style="color:#f87171">ইন্টারনেট সংযোগ নেই।</span>';
+        });
+    }
+    
+    // Listen for the submit click
+    form.addEventListener("submit", handleSubmit);
 </script>
    <script>// Prevent right-click
      // document.addEventListener('contextmenu', e => e.preventDefault());
