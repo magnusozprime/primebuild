@@ -1,784 +1,234 @@
-<!doctypehtml>
-<html lang=bn>
-   <meta charset=UTF-8>
-   <meta content="width=device-width,initial-scale=1"name=viewport>
-   <!-- Social Media Sharing Meta Tags -->
-<meta property="og:title" content="Meghna Mannan Tower - Luxury Living in Magura">
-<meta property="og:description" content="10 Storied Building, 3 Lifts, Community Hall. Book your flat today!">
-<meta property="og:image" content="https://i.ibb.co.com/zVhRbnTK/meghna.jpg"> <!-- Uses your logo or use a building pic -->
-<meta property="og:url" content="https://meghnabuilders.com">
-<meta property="og:type" content="website">
-   <title>Meghna Home Builders Ltd. - Magura</title>
-   <link href=https://fonts.googleapis.com rel=preconnect>
-   <link href=https://fonts.gstatic.com rel=preconnect crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap"rel=stylesheet>
-   <link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css rel=stylesheet>
-<style>:root {
-	--primary: #0f172a;
-	--primary-light: #1e293b;
-	--gold: #c29d59;
-	--gold-hover: #d4af37;
-	--bg-light: #f8fafc;
-	--white: #ffffff;
-	--text-main: #334155;
-	--text-light: #475569;
-	--font-eng: 'Montserrat', sans-serif;
-	--font-bn: 'Noto Sans Bengali', sans-serif;
-	--shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-	--radius: 8px
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth
-}
-
-body {
-	font-family: var(--font-bn);
-	color: var(--text-main);
-	background-color: var(--white);
-	line-height: 1.7;
-	overflow-x: hidden
-}
-
-h1,
-h2,
-h3,
-h4 {
-	font-family: var(--font-bn);
-	color: var(--primary);
-	font-weight: 700
-}
-
-a {
-	text-decoration: none;
-	transition: .3s
-}
-
-ul {
-	list-style: none
-}
-
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px
-}
-
-.section-padding {
-	padding: 80px 0
-}
-
-.section-title {
-	text-align: center;
-	margin-bottom: 50px
-}
-
-.section-title span {
-	color: var(--gold);
-	font-weight: 600;
-	text-transform: uppercase;
-	font-size: .9rem;
-	display: block;
-	margin-bottom: 10px;
-	font-family: var(--font-eng)
-}
-
-.section-title h2 {
-	font-size: 2.2rem;
-	margin-bottom: 15px
-}
-
-.reveal {
-	opacity: 0;
-	transform: translateY(30px);
-	transition: all .8s ease
-}
-
-.reveal.active {
-	opacity: 1;
-	transform: translateY(0)
-}
-
-nav {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1000;
-	background: rgba(255, 255, 255, .98);
-	box-shadow: 0 2px 15px rgba(0, 0, 0, .05);
-	padding: 15px 0
-}
-
-.nav-wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center
-}
-
-.logo {
-	font-family: var(--font-eng);
-	font-weight: 800;
-	font-size: 1.4rem;
-	color: var(--primary);
-	text-transform: uppercase
-}
-
-.logo span {
-	color: var(--gold)
-}
-
-.nav-menu {
-	display: flex;
-	gap: 30px
-}
-
-.nav-menu a {
-	color: var(--text-main);
-	font-weight: 600
-}
-
-.nav-menu a:hover {
-	color: var(--gold)
-}
-
-.btn-gold {
-	background: var(--gold);
-	color: #fff;
-	padding: 10px 25px;
-	border-radius: var(--radius);
-	font-weight: 600;
-	display: inline-block
-}
-
-.btn-gold:hover {
-	background: var(--gold-hover);
-	transform: translateY(-2px)
-}
-
-.hero {
-	height: 90vh;
-	background: linear-gradient(rgba(15, 23, 42, .85), rgba(15, 23, 42, .75)), url(https://i.ibb.co.com/nMQMP2HK/meghna.jpg?q=80&w=2070&auto=format&fit=crop);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	color: #fff;
-	padding: 0 20px;
-	margin-top: 60px
-}
-
-.hero h1 {
-	font-size: 3rem;
-	color: #fff;
-	margin-bottom: 20px
-}
-
-.hero-badge {
-	background: rgba(255, 255, 255, .1);
-	border: 1px solid var(--gold);
-	padding: 10px 20px;
-	border-radius: 50px;
-	color: var(--gold);
-	font-weight: 600;
-	margin-bottom: 20px;
-	display: inline-block
-}
-
-.flat-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	gap: 30px
-}
-
-.flat-card {
-	background: #fff;
-	border-radius: var(--radius);
-	overflow: hidden;
-	box-shadow: var(--shadow);
-	border: 1px solid #eee;
-	transition: .3s
-}
-
-.flat-card:hover {
-	transform: translateY(-5px);
-	border-color: var(--gold)
-}
-
-.flat-img {
-	height: 220px;
-	background-size: cover;
-	background-position: center
-}
-
-.flat-body {
-	padding: 20px
-}
-
-.flat-title {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 15px;
-	border-bottom: 1px solid #eee;
-	padding-bottom: 10px
-}
-
-.flat-title h3 {
-	font-size: 1.3rem;
-	margin: 0
-}
-
-.size-badge {
-	background: var(--primary);
-	color: #fff;
-	padding: 5px 10px;
-	border-radius: 4px;
-	font-size: .9rem;
-	font-family: var(--font-eng)
-}
-
-.flat-features li {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 8px;
-	font-size: .95rem;
-	color: var(--text-light)
-}
-
-.flat-features i {
-	color: var(--gold);
-	margin-right: 8px
-}
-
-.show-more-card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: var(--bg-light);
-	border: 2px dashed var(--gold);
-	cursor: pointer;
-	min-height: 300px;
-	transition: .3s
-}
-
-.show-more-card:hover {
-	background: #fffbeb
-}
-
-.show-more-card i {
-	font-size: 3rem;
-	color: var(--gold);
-	margin-bottom: 15px
-}
-
-.show-more-card span {
-	font-size: 1.2rem;
-	font-weight: 700;
-	color: var(--primary)
-}
-
-.hidden-flats {
-	display: none
-}
-
-.features-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 25px;
-	margin-top: -60px;
-	position: relative;
-	z-index: 10
-}
-
-.feature-box {
-	background: #fff;
-	padding: 30px;
-	border-radius: var(--radius);
-	box-shadow: var(--shadow);
-	text-align: center;
-	border-bottom: 3px solid var(--gold)
-}
-
-.feature-box i {
-	font-size: 2.5rem;
-	color: var(--primary);
-	margin-bottom: 15px
-}
-
-.specs-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 40px
-}
-
-.spec-card {
-	background: #fff;
-	padding: 30px;
-	border-radius: var(--radius);
-	box-shadow: var(--shadow)
-}
-
-.spec-card.developer {
-	border-top: 5px solid #10b981
-}
-
-.spec-card.buyer {
-	border-top: 5px solid #f59e0b
-}
-
-.spec-list li {
-	margin-bottom: 12px;
-	border-bottom: 1px dashed #eee;
-	padding-bottom: 5px;
-	display: flex;
-	gap: 10px
-}
-
-footer {
-	background: var(--primary);
-	color: #fff;
-	padding: 60px 0 20px
-}
-
-.footer-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 40px
-}
-
-.contact-item {
-	display: flex;
-	gap: 15px;
-	margin-bottom: 15px;
-	color: #cbd5e1
-}
-
-@media (max-width:768px) {
-	.hero h1 {
-		font-size: 2rem
-	}
-
-	.nav-menu {
-		display: none
-	}
-
-	.specs-container {
-		grid-template-columns: 1fr
-	}
-
-	.features-grid {
-		margin-top: 30px
-	}
-}
-
-.ready-flat-notice {
-	margin-top: 50px;
-	background: #fffbeb;
-	border: 2px dashed var(--gold);
-	border-radius: var(--radius);
-	padding: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 20px;
-	flex-wrap: wrap;
-	box-shadow: 0 4px 15px rgba(194, 157, 89, .15)
-}
-
-.notice-content {
-	display: flex;
-	align-items: center;
-	gap: 20px
-}
-
-.notice-icon {
-	font-size: 2.5rem;
-	color: var(--gold);
-	background: #fff;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, .05)
-}
-
-.notice-text h3 {
-	font-size: 1.4rem;
-	margin-bottom: 5px;
-	color: var(--primary)
-}
-
-.notice-text p {
-	margin: 0;
-	color: var(--text-light);
-	font-size: .95rem
-}
-
-.btn-contact-outline {
-	border: 2px solid var(--primary);
-	color: var(--primary);
-	padding: 10px 25px;
-	border-radius: var(--radius);
-	font-weight: 700;
-	white-space: nowrap
-}
-
-.btn-contact-outline:hover {
-	background: var(--primary);
-	color: #fff
-}
-
-@media (max-width:768px) {
-	.ready-flat-notice {
-		flex-direction: column;
-		text-align: center
-	}
-
-	.notice-content {
-		flex-direction: column;
-		gap: 10px
-	}
-}
-
-.logo-wrapper {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	text-decoration: none
-}
-
-.logo-img {
-	height: 50px;
-	width: auto
-}
-
-.logo-text {
-	font-family: var(--font-eng);
-	font-weight: 800;
-	font-size: 1.4rem;
-	color: var(--primary);
-	text-transform: uppercase;
-	line-height: 1;
-	display: flex;
-	flex-direction: column
-}
-
-.logo-text span {
-	color: var(--gold)
-}
-
-@media (max-width:768px) {
-	.logo-img {
-		height: 40px
-	}
-
-	.logo-text {
-		font-size: 1.1rem
-	}
-}
-
-.menu-toggle {
-	display: none;
-	font-size: 1.8rem;
-	color: var(--primary);
-	cursor: pointer
-}
-
-@media (max-width:768px) {
-	.menu-toggle {
-		display: block
-	}
-
-	.nav-menu {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		background: var(--white);
-		flex-direction: column;
-		padding: 20px 0;
-		box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
-		text-align: center;
-		gap: 20px;
-		border-top: 1px solid #eee
-	}
-
-	.nav-menu.active {
-		display: flex;
-		animation: slideDown .3s ease forwards
-	}
-
-	@keyframes slideDown {
-		from {
-			opacity: 0;
-			transform: translateY(-10px)
-		}
-
-		to {
-			opacity: 1;
-			transform: translateY(0)
-		}
-	}
-}
-
-.dev-intro {
-	font-family: var(--font-eng);
-	color: var(--gold);
-	font-size: .9rem;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin-bottom: 5px;
-	display: block;
-	opacity: .9
-}
-
-.project-name {
-	font-size: 4rem;
-	font-weight: 700;
-	color: var(--white);
-	margin-bottom: 10px;
-	text-shadow: 0 4px 20px rgba(0, 0, 0, .5);
-	line-height: 1.1
-}
-
-.project-location {
-	font-size: 1.3rem;
-	color: #e2e8f0;
-	font-weight: 500;
-	margin-bottom: 30px;
-	display: block
-}
-
-@media (max-width:768px) {
-	.dev-intro {
-		font-size: .75rem;
-		letter-spacing: 1px
-	}
-
-	.project-name {
-		font-size: 2.5rem
-	}
-
-	.project-location {
-		font-size: 1rem
-	}
-}
-
-
-/* --- PRICE & CARD BUTTON --- */
-.price-box {
-    background: #f8fafc;
-    padding: 10px;
-    border-radius: 6px;
-    text-align: center;
-    margin: 15px 0;
-    font-weight: 700;
-    color: var(--primary);
-    border: 1px dashed #cbd5e1;
-}
-.price-box span {
-    color: var(--gold);
-    font-size: 1.1rem;
-}
-.btn-card-action {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
-    padding: 8px 0;
-    border-radius: var(--radius);
-    font-weight: 600;
-    transition: 0.3s;
-}
-.btn-card-action:hover {
-    background: var(--primary);
-    color: white;
-}
-
-
-/* --- HIDE/SHOW LOGIC --- */
-/* This hides the extra flats by default */
-.hidden-flats {
-    display: none !important;
-}
-
-/* This makes sure the animation plays when they appear */
-.extra-flat.reveal.active {
-    animation: fadeInUp 0.5s ease forwards;
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- AVAILABILITY TABLE STYLES --- */
-.table-container {
-    overflow-x: auto; /* Scroll on mobile */
-    background: white;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 20px;
-    border-top: 4px solid var(--gold);
-}
-
-.status-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 600px; /* Ensures layout doesn't break on small screens */
-}
-
-.status-table th, .status-table td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-}
-
-.status-table th {
-    background: var(--bg-light);
-    color: var(--primary);
-    font-weight: 700;
-    font-family: var(--font-eng);
-}
-
-.floor-name {
-    font-weight: 700;
-    color: var(--primary);
-    background: #f8fafc;
-    text-align: left;
-}
-
-/* Indicators */
-.status-dot {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.is-available {
-    background-color: #dcfce7; /* Light Green Bg */
-    color: #16a34a; /* Dark Green Icon */
-    border: 1px solid #86efac;
-    cursor: pointer;
-}
-.is-available:hover {
-    transform: scale(1.1);
-    background-color: #16a34a;
-    color: white;
-}
-
-.is-booked {
-    background-color: #fee2e2; /* Light Red Bg */
-    color: #dc2626; /* Dark Red Icon */
-    border: 1px solid #fca5a5;
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-
-/* Legend */
-.legend-box {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-.legend-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: var(--font-bn);
-}
-.contact-form button {
-    width: 100%;
-    background: var(--gold);
-    color: white;
-    border: none;
-    padding: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    border-radius: 4px;
-}
-.contact-form button:hover { background: var(--gold-hover); }
-
-h4 {
-	color: white;
-	}
-</style>   <nav>
-      <div class="container nav-wrapper">
-         <a href=#home class=logo-wrapper>
-            <img alt=Logo class=logo-img src=https://i.ibb.co/zVhRbnTK/meghna.jpg>
-            <div class=logo-text>MEGHNA <span>HOME-BUILDERS</span></div>
-         </a>
-         <div class=menu-toggle onclick=toggleMenu()><i class="fas fa-bars"></i></div>
-         <div class=nav-menu id=mobileMenu><a href=#home>হোম</a> <a href=#apartments>ফ্ল্যাট সাইজ</a> <a href=#specs>বিবরণ</a> <a href=#contact class=btn-gold>যোগাযোগ</a></div>
-      </div>
-   </nav>
-   <header class=hero id=home>
-      <div class="reveal container">
-         <span class=dev-intro>Meghna Home Builders Presents</span>
-         <h1 class=project-name>মেঘনা মান্নান টাওয়ার</h1>
-         <span class=project-location>মাগুরা শহরের প্রাণকেন্দ্রে ১০ তলা অভিজাত আবাসন</span>
-         <div class=hero-badge><i class="fas fa-tags"style=margin-right:8px></i>৩৬ মাসের কিস্তির সু-ব্যাবস্থা</div>
-         <br><a href=#apartments class=btn-gold>ফ্ল্যাট ও ফ্লোর প্ল্যান দেখুন</a>
-      </div>
-   </header>
-   <section class=container>
-      <div class="reveal features-grid">
-         <div class=feature-box>
-            <i class="fas fa-building"></i>
-            <h4>১০ তলা ভবন</h4>
-            <p>শহরের প্রাণকেন্দ্রে অবস্থিত সুউচ্চ ও আধুনিক স্থাপত্য।
-         </div>
-         <div class=feature-box>
-            <i class="fas fa-elevator"></i>
-            <h4>লিফট ও সিঁড়ি</h4>
-            <p>৩টি ফাস্ট প্যাসেঞ্জার লিফট এবং ৩টি প্রশস্থ সিঁড়ি।
-         </div>
-         <div class=feature-box>
-            <i class="fas fa-mosque"></i>
-            <h4>কমিউনিটি সুবিধা</h4>
-            <p>কমিউনিটি হল, নামাজের কক্ষ এবং বাচ্চাদের প্লে-গ্রাউন্ড।
-         </div>
-         <div class=feature-box>
-            <i class="fas fa-car"></i>
-            <h4>পার্কিং ও নিরাপত্তা</h4>
-            <p>পার্কিং সুব্যবস্থা, ২৪/৭ সিসি ক্যামেরা এবং জেনারেটর।
-         </div>
-      </div>
-   </section>
-
-   
-   
-   <!-- APARTMENTS SECTION (Updated) -->
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    
+    <!-- Social Media Sharing Meta Tags -->
+    <meta property="og:title" content="Meghna Mannan Tower - Luxury Living in Magura">
+    <meta property="og:description" content="10 Storied Building, 3 Lifts, Community Hall. Book your flat today!">
+    <meta property="og:image" content="https://i.ibb.co.com/zVhRbnTK/meghna.jpg">
+    <meta property="og:url" content="https://meghnabuilders.com">
+    <meta property="og:type" content="website">
+    
+    <title>Meghna Home Builders Ltd. - Magura</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --gold: #c29d59;
+            --gold-hover: #d4af37;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --text-main: #334155;
+            --text-light: #475569;
+            --font-eng: 'Montserrat', sans-serif;
+            --font-bn: 'Noto Sans Bengali', sans-serif;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --radius: 8px
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth }
+        body { font-family: var(--font-bn); color: var(--text-main); background-color: var(--white); line-height: 1.7; overflow-x: hidden }
+        h1, h2, h3, h4 { font-family: var(--font-bn); color: var(--primary); font-weight: 700 }
+        h4 { color: var(--primary); } /* Default dark for body */
+        footer h4 { color: white; }   /* White for footer */
+        
+        a { text-decoration: none; transition: .3s }
+        ul { list-style: none }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px }
+        .section-padding { padding: 80px 0 }
+        
+        .section-title { text-align: center; margin-bottom: 50px }
+        .section-title span { color: var(--gold); font-weight: 600; text-transform: uppercase; font-size: .9rem; display: block; margin-bottom: 10px; font-family: var(--font-eng) }
+        .section-title h2 { font-size: 2.2rem; margin-bottom: 15px }
+
+        /* Animation */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all .8s ease }
+        .reveal.active { opacity: 1; transform: translateY(0) }
+
+        /* Navbar */
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(255, 255, 255, .98); box-shadow: 0 2px 15px rgba(0, 0, 0, .05); padding: 15px 0 }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center }
+        
+        /* Logo */
+        .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none }
+        .logo-img { height: 50px; width: auto }
+        .logo-text { font-family: var(--font-eng); font-weight: 800; font-size: 1.4rem; color: var(--primary); text-transform: uppercase; line-height: 1; display: flex; flex-direction: column }
+        .logo-text span { color: var(--gold) }
+
+        /* Mobile Menu */
+        .menu-toggle { display: none; font-size: 1.8rem; color: var(--primary); cursor: pointer }
+        .nav-menu { display: flex; gap: 30px }
+        .nav-menu a { color: var(--text-main); font-weight: 600 }
+        .nav-menu a:hover { color: var(--gold) }
+        
+        .btn-gold { background: var(--gold); color: #fff; padding: 10px 25px; border-radius: var(--radius); font-weight: 600; display: inline-block }
+        .btn-gold:hover { background: var(--gold-hover); transform: translateY(-2px) }
+
+        /* Hero */
+        .hero { height: 90vh; background: linear-gradient(rgba(15, 23, 42, .85), rgba(15, 23, 42, .75)), url(https://i.ibb.co.com/nMQMP2HK/meghna.jpg?q=80&w=2070&auto=format&fit=crop); background-size: cover; background-position: center; background-attachment: fixed; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 0 20px; margin-top: 60px }
+        .dev-intro { font-family: var(--font-eng); color: var(--gold); font-size: .9rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; display: block; opacity: .9 }
+        .project-name { font-size: 4rem; font-weight: 700; color: var(--white); margin-bottom: 10px; text-shadow: 0 4px 20px rgba(0, 0, 0, .5); line-height: 1.1 }
+        .project-location { font-size: 1.3rem; color: #e2e8f0; font-weight: 500; margin-bottom: 30px; display: block }
+        .hero-badge { background: rgba(255, 255, 255, .1); border: 1px solid var(--gold); padding: 10px 20px; border-radius: 50px; color: var(--gold); font-weight: 600; margin-bottom: 20px; display: inline-block }
+
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: -60px; position: relative; z-index: 10 }
+        .feature-box { background: #fff; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; border-bottom: 3px solid var(--gold) }
+        .feature-box i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px }
+
+        /* Apartments */
+        .flat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px }
+        .flat-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid #eee; transition: .3s }
+        .flat-card:hover { transform: translateY(-5px); border-color: var(--gold) }
+        .flat-img { height: 220px; background-size: cover; background-position: center }
+        .flat-body { padding: 20px }
+        .flat-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px }
+        .flat-title h3 { font-size: 1.3rem; margin: 0 }
+        .size-badge { background: var(--primary); color: #fff; padding: 5px 10px; border-radius: 4px; font-size: .9rem; font-family: var(--font-eng) }
+        .flat-features li { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: .95rem; color: var(--text-light) }
+        .flat-features i { color: var(--gold); margin-right: 8px }
+        
+        .price-box { background: #f8fafc; padding: 10px; border-radius: 6px; text-align: center; margin: 15px 0; font-weight: 700; color: var(--primary); border: 1px dashed #cbd5e1; }
+        .price-box span { color: var(--gold); font-size: 1.1rem; }
+        .btn-card-action { display: block; width: 100%; text-align: center; background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 8px 0; border-radius: var(--radius); font-weight: 600; transition: 0.3s; }
+        .btn-card-action:hover { background: var(--primary); color: white; }
+
+        /* Show More Logic */
+        .show-more-card { display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--bg-light); border: 2px dashed var(--gold); cursor: pointer; min-height: 300px; transition: .3s }
+        .show-more-card:hover { background: #fffbeb }
+        .show-more-card i { font-size: 3rem; color: var(--gold); margin-bottom: 15px }
+        .show-more-card span { font-size: 1.2rem; font-weight: 700; color: var(--primary) }
+        .hidden-flats { display: none !important }
+        .extra-flat.reveal.active { animation: fadeInUp 0.5s ease forwards; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Availability Table */
+        .table-container { overflow-x: auto; background: white; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; border-top: 4px solid var(--gold); }
+        .status-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        .status-table th, .status-table td { padding: 15px; text-align: center; border-bottom: 1px solid #eee; }
+        .status-table th { background: var(--bg-light); color: var(--primary); font-weight: 700; font-family: var(--font-eng); }
+        .floor-name { font-weight: 700; color: var(--primary); background: #f8fafc; text-align: left; }
+        .status-dot { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; font-size: 14px; transition: 0.3s; }
+        .is-available { background-color: #dcfce7; color: #16a34a; border: 1px solid #86efac; cursor: pointer; }
+        .is-available:hover { transform: scale(1.1); background-color: #16a34a; color: white; }
+        .is-booked { background-color: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; opacity: 0.7; cursor: not-allowed; }
+        .legend-box { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.95rem; }
+
+        /* Specs & Notice */
+        .specs-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px }
+        .spec-card { background: #fff; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow) }
+        .spec-card.developer { border-top: 5px solid #10b981 }
+        .spec-card.buyer { border-top: 5px solid #f59e0b }
+        .spec-list li { margin-bottom: 12px; border-bottom: 1px dashed #eee; padding-bottom: 5px; display: flex; gap: 10px }
+        
+        .ready-flat-notice { margin-top: 50px; background: #fffbeb; border: 2px dashed var(--gold); border-radius: var(--radius); padding: 30px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; box-shadow: 0 4px 15px rgba(194, 157, 89, .15) }
+        .notice-content { display: flex; align-items: center; gap: 20px }
+        .notice-icon { font-size: 2.5rem; color: var(--gold); background: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0, 0, 0, .05) }
+        .notice-text h3 { font-size: 1.4rem; margin-bottom: 5px; color: var(--primary) }
+        .btn-contact-outline { border: 2px solid var(--primary); color: var(--primary); padding: 10px 25px; border-radius: var(--radius); font-weight: 700; white-space: nowrap }
+        .btn-contact-outline:hover { background: var(--primary); color: #fff }
+
+        /* Footer & Form */
+        footer { background: var(--primary); color: #fff; padding: 60px 0 20px }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px }
+        .contact-item { display: flex; gap: 15px; margin-bottom: 15px; color: #cbd5e1 }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 4px; border: 1px solid #334155; background: rgba(255, 255, 255, 0.05); color: white; font-family: var(--font-bn); outline: none; font-size: 0.95rem; }
+        .contact-form input:focus { border-color: var(--gold); background: rgba(255, 255, 255, 0.1); }
+        .contact-form button { width: 100%; background: var(--gold); color: white; border: none; padding: 12px; font-weight: 700; cursor: pointer; border-radius: 4px; font-family: var(--font-bn); }
+        .contact-form button:hover { background: var(--gold-hover); }
+
+        /* Responsive */
+        @media (max-width:768px) {
+            .hero h1 { font-size: 2rem }
+            .project-name { font-size: 2.5rem }
+            .dev-intro { font-size: .75rem; letter-spacing: 1px }
+            .specs-container { grid-template-columns: 1fr }
+            .features-grid { margin-top: 30px }
+            .ready-flat-notice { flex-direction: column; text-align: center }
+            .notice-content { flex-direction: column; gap: 10px }
+            .logo-img { height: 40px }
+            .logo-text { font-size: 1.1rem }
+            
+            /* Mobile Menu Active Logic */
+            .menu-toggle { display: block }
+            .nav-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 20px 0; box-shadow: 0 5px 15px rgba(0, 0, 0, .1); text-align: center; gap: 20px; border-top: 1px solid #eee }
+            .nav-menu.active { display: flex; animation: slideDown .3s ease forwards }
+            @keyframes slideDown { from { opacity: 0; transform: translateY(-10px) } to { opacity: 1; transform: translateY(0) } }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-wrapper">
+            <a href="#home" class="logo-wrapper">
+                <img alt="Logo" class="logo-img" src="https://i.ibb.co/zVhRbnTK/meghna.jpg">
+                <div class="logo-text">MEGHNA <span>HOME-BUILDERS</span></div>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+            <div class="nav-menu" id="mobileMenu">
+                <a href="#home">হোম</a>
+                <a href="#apartments">ফ্ল্যাট সাইজ</a>
+                <a href="#specs">বিবরণ</a>
+                <a href="#contact" class="btn-gold">যোগাযোগ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="reveal container">
+            <span class="dev-intro">Meghna Home Builders Presents</span>
+            <h1 class="project-name">মেঘনা মান্নান টাওয়ার</h1>
+            <span class="project-location">মাগুরা শহরের প্রাণকেন্দ্রে ১০ তলা অভিজাত আবাসন</span>
+            <div class="hero-badge"><i class="fas fa-tags" style="margin-right:8px"></i>৩৬ মাসের কিস্তির সু-ব্যাবস্থা</div>
+            <br>
+            <a href="#apartments" class="btn-gold">ফ্ল্যাট ও ফ্লোর প্ল্যান দেখুন</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="container">
+        <div class="reveal features-grid">
+            <div class="feature-box">
+                <i class="fas fa-building"></i>
+                <h4>১০ তলা ভবন</h4>
+                <p>শহরের প্রাণকেন্দ্রে অবস্থিত সুউচ্চ ও আধুনিক স্থাপত্য।</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-elevator"></i>
+                <h4>লিফট ও সিঁড়ি</h4>
+                <p>৩টি ফাস্ট প্যাসেঞ্জার লিফট এবং ৩টি প্রশস্থ সিঁড়ি।</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-mosque"></i>
+                <h4>কমিউনিটি সুবিধা</h4>
+                <p>কমিউনিটি হল, নামাজের কক্ষ এবং বাচ্চাদের প্লে-গ্রাউন্ড।</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-car"></i>
+                <h4>পার্কিং ও নিরাপত্তা</h4>
+                <p>পার্কিং সুব্যবস্থা, ২৪/৭ সিসি ক্যামেরা এবং জেনারেটর।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apartments Section -->
     <section id="apartments" class="section-padding" style="background: var(--bg-light);">
         <div class="container">
             <div class="section-title reveal">
@@ -787,10 +237,10 @@ h4 {
                 <p>আমাদের প্রতিটি ফ্ল্যাট আধুনিক এবং খোলামেলা ডিজাইনে তৈরি।</p>
             </div>
 
-            <!-- The Grid Container -->
+            <!-- Grid Container -->
             <div class="flat-grid reveal" id="flatContainer">
                 
-                <!-- Unit A (Price: 3500 x 1336 = 4,676,000) -->
+                <!-- Unit A -->
                 <div class="flat-card">
                     <div class="flat-img" style="background-image: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800&auto=format&fit=crop');"></div>
                     <div class="flat-body">
@@ -804,15 +254,12 @@ h4 {
                             <li><span><i class="fas fa-wind"></i> বারান্দা:</span> <span>৩টি</span></li>
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
-                        <!-- Price & Button -->
-                        <div class="price-box">
-                            মোট মূল্য: <span>4,676,000 BDT</span>
-                        </div>
+                        <div class="price-box">মোট মূল্য: <span>4,676,000 BDT</span></div>
                         <a href="#contact" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
-                <!-- Unit B (Price: 3500 x 1316 = 4,606,000) -->
+                <!-- Unit B -->
                 <div class="flat-card">
                     <div class="flat-img" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop');"></div>
                     <div class="flat-body">
@@ -826,15 +273,12 @@ h4 {
                             <li><span><i class="fas fa-wind"></i> বারান্দা:</span> <span>৩টি</span></li>
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
-                        <!-- Price & Button -->
-                        <div class="price-box">
-                            মোট মূল্য: <span>4,606,000 BDT</span>
-                        </div>
+                        <div class="price-box">মোট মূল্য: <span>4,606,000 BDT</span></div>
                         <a href="#contact" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
-                <!-- Unit C (Price: 3300 x 1530 = 5,049,000) -->
+                <!-- Unit C -->
                 <div class="flat-card">
                     <div class="flat-img" style="background-image: url('https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=800&auto=format&fit=crop');"></div>
                     <div class="flat-body">
@@ -848,24 +292,20 @@ h4 {
                             <li><span><i class="fas fa-wind"></i> বারান্দা:</span> <span>৩টি</span></li>
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
-                        <!-- Price & Button -->
-                        <div class="price-box">
-                            মোট মূল্য: <span>5,049,000 BDT</span>
-                        </div>
+                        <div class="price-box">মোট মূল্য: <span>5,049,000 BDT</span></div>
                         <a href="#contact" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
-                <!-- Show More Button Card (4th Place) -->
+                <!-- Show More Button -->
                 <div class="flat-card show-more-card" id="showMoreBtn" onclick="showAllFlats()">
                     <i class="fas fa-plus-circle"></i>
                     <span>অন্যান্য ফ্ল্যাটগুলো দেখুন</span>
                     <span style="font-size: 0.9rem; color: #666; margin-top: 5px;">(আরও ৪টি সাইজ আছে)</span>
                 </div>
 
-                <!-- HIDDEN FLATS (D, E, F, G) -->
-                
-                <!-- Unit D (Price: 3300 x 1125 = 3,712,500) -->
+                <!-- Hidden Flats -->
+                <!-- Unit D -->
                 <div class="flat-card hidden-flats extra-flat">
                     <div class="flat-img" style="background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop');"></div>
                     <div class="flat-body">
@@ -879,15 +319,12 @@ h4 {
                             <li><span><i class="fas fa-wind"></i> বারান্দা:</span> <span>২টি</span></li>
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
-                        <!-- Price & Button -->
-                        <div class="price-box">
-                            মোট মূল্য: <span>3,712,500 BDT</span>
-                        </div>
+                        <div class="price-box">মোট মূল্য: <span>3,712,500 BDT</span></div>
                         <a href="#contact" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
-                <!-- Unit E (Price: 3300 x 1080 = 3,564,000) -->
+                <!-- Unit E -->
                 <div class="flat-card hidden-flats extra-flat">
                     <div class="flat-img" style="background-image: url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop');"></div>
                     <div class="flat-body">
@@ -901,15 +338,12 @@ h4 {
                             <li><span><i class="fas fa-wind"></i> বারান্দা:</span> <span>২টি</span></li>
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
-                        <!-- Price & Button -->
-                        <div class="price-box">
-                            মোট মূল্য: <span>3,564,000 BDT</span>
-                        </div>
+                        <div class="price-box">মোট মূল্য: <span>3,564,000 BDT</span></div>
                         <a href="#contact" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
-                <!-- Unit F (Price: 3300 x 1248 = 4,118,400) -->
+                <!-- Unit F -->
                 <div class="flat-card hidden-flats extra-flat">
                     <div class="flat-img" style="background-image: url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=800&auto=format&fit=crop');"></div>
                     <div class="flat-body">
@@ -923,15 +357,12 @@ h4 {
                             <li><span><i class="fas fa-wind"></i> বারান্দা:</span> <span>৩টি</span></li>
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
-                        <!-- Price & Button -->
-                        <div class="price-box">
-                            মোট মূল্য: <span>4,118,400 BDT</span>
-                        </div>
+                        <div class="price-box">মোট মূল্য: <span>4,118,400 BDT</span></div>
                         <a href="#contact" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
-                <!-- Unit G (Price: 3500 x 1327 = 4,644,500) -->
+                <!-- Unit G -->
                 <div class="flat-card hidden-flats extra-flat">
                     <div class="flat-img" style="background-image: url('https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=800&auto=format&fit=crop');"></div>
                     <div class="flat-body">
@@ -945,429 +376,267 @@ h4 {
                             <li><span><i class="fas fa-wind"></i> বারান্দা:</span> <span>৩টি</span></li>
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
-                        <!-- Price & Button -->
-                        <div class="price-box">
-                            মোট মূল্য: <span>4,644,500 BDT</span>
-                        </div>
+                        <div class="price-box">মোট মূল্য: <span>4,644,500 BDT</span></div>
                         <a href="#contact" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
-
             </div>
             
-            <!-- Ready Flat Notice (Optional: keep this here if you want it below the grid) -->
+            <!-- Ready Flat Notice -->
             <div class="ready-flat-notice reveal">
                 <div class="notice-content">
                     <div class="notice-icon"><i class="fas fa-bullhorn"></i></div>
                     <div class="notice-text">
                         <h3>রেডি ফ্ল্যাট বিক্রয় চলছে!</h3>
-                        <p>আমাদের কাছে সম্পূর্ণ প্রস্তুত (Ready) ফ্ল্যাটও বিক্রয় করা হয়।</p>
+                        <p>সম্পূর্ণ প্রস্তুত (Ready) ফ্ল্যাটও বিক্রয় করা হয়। বিস্তারিত জানতে আজই যোগাযোগ করুন।</p>
                     </div>
                 </div>
                 <a href="#contact" class="btn-contact-outline">কল করুন</a>
             </div>
-
         </div>
     </section>
-    
-    <!-- AVAILABILITY SECTION -->
-<section id="availability" class="section-padding">
-    <div class="container reveal">
-        <div class="section-title">
-            <span>Current Status</span>
-            <h2>ফ্ল্যাট বুকিং স্ট্যাটাস</h2>
-            <p>নিচের ছক থেকে দেখে নিন কোন ফ্লোরের কোন ফ্ল্যাটটি বর্তমানে খালি আছে।</p>
-        </div>
 
-        <!-- Legend (Instruction) -->
-        <div class="legend-box">
-            <div class="legend-item">
-                <span class="status-dot is-available"><i class="fas fa-check"></i></span>
-                <span>= খালি আছে (Available)</span>
+    <!-- Availability Section -->
+    <section id="availability" class="section-padding">
+        <div class="container reveal">
+            <div class="section-title">
+                <span>Current Status</span>
+                <h2>ফ্ল্যাট বুকিং স্ট্যাটাস</h2>
+                <p>নিচের ছক থেকে দেখে নিন কোন ফ্লোরের কোন ফ্ল্যাটটি বর্তমানে খালি আছে।</p>
             </div>
-            <div class="legend-item">
-                <span class="status-dot is-booked"><i class="fas fa-times"></i></span>
-                <span>= বিক্রি হয়ে গেছে (Sold)</span>
-            </div>
-        </div>
 
-        <!-- The Table -->
-        <div class="table-container">
-            <table class="status-table">
-                <thead>
-                    <tr>
-                        <th style="text-align: left; padding-left: 20px;">FLOOR</th>
-                        <th>Unit A</th>
-                        <th>Unit B</th>
-                        <th>Unit C</th>
-                        <th>Unit D</th>
-                        <th>Unit E</th>
-                        <th>Unit F</th>
-                        <th>Unit G</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- 9th Floor -->
-                    <tr>
-                        <td class="floor-name">9th Floor</td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                    </tr>
-                    <!-- 8th Floor -->
-                    <tr>
-                        <td class="floor-name">8th Floor</td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                    </tr>
-                    <!-- 7th Floor -->
-                    <tr>
-                        <td class="floor-name">7th Floor</td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                    </tr>
-                    <!-- 6th Floor -->
-                    <tr>
-                        <td class="floor-name">6th Floor</td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                    </tr>
-                    <!-- 5th Floor -->
-                    <tr>
-                        <td class="floor-name">5th Floor</td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                    </tr>
-                    <!-- 4th Floor -->
-                    <tr>
-                        <td class="floor-name">4th Floor</td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                    </tr>
-                    <!-- 3rd Floor -->
-                    <tr>
-                        <td class="floor-name">3rd Floor</td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                    </tr>
-                    <!-- 2nd Floor -->
-                    <tr>
-                        <td class="floor-name">2nd Floor</td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-available" title="Available"><i class="fas fa-check"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                    </tr>
-                    <!-- 1st Floor -->
-                    <tr>
-                        <td class="floor-name">1st Floor</td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                        <td><span class="status-dot is-booked" title="Sold"><i class="fas fa-times"></i></span></td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Legend -->
+            <div class="legend-box">
+                <div class="legend-item">
+                    <span class="status-dot is-available"><i class="fas fa-check"></i></span>
+                    <span>= খালি আছে (Available)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="status-dot is-booked"><i class="fas fa-times"></i></span>
+                    <span>= বিক্রি হয়ে গেছে (Sold)</span>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-container">
+                <table class="status-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left; padding-left: 20px;">FLOOR</th>
+                            <th>Unit A</th><th>Unit B</th><th>Unit C</th><th>Unit D</th><th>Unit E</th><th>Unit F</th><th>Unit G</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 9th Floor -->
+                        <tr><td class="floor-name">9th Floor</td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td></tr>
+                        <!-- 8th Floor -->
+                        <tr><td class="floor-name">8th Floor</td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td></tr>
+                        <!-- 7th Floor -->
+                        <tr><td class="floor-name">7th Floor</td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td></tr>
+                        <!-- 6th Floor -->
+                        <tr><td class="floor-name">6th Floor</td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td></tr>
+                        <!-- 5th Floor -->
+                        <tr><td class="floor-name">5th Floor</td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td></tr>
+                        <!-- 4th Floor -->
+                        <tr><td class="floor-name">4th Floor</td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td></tr>
+                        <!-- 3rd Floor -->
+                        <tr><td class="floor-name">3rd Floor</td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td></tr>
+                        <!-- 2nd Floor -->
+                        <tr><td class="floor-name">2nd Floor</td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-available"><i class="fas fa-check"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td></tr>
+                        <!-- 1st Floor -->
+                        <tr><td class="floor-name">1st Floor</td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td><td><span class="status-dot is-booked"><i class="fas fa-times"></i></span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #666;">*স্ট্যাটাস প্রতিনিয়ত আপডেট করা হয়। সর্বশেষ তথ্যের জন্য কল করুন।</p>
         </div>
-        <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #666;">
-            *স্ট্যাটাস প্রতিনিয়ত আপডেট করা হয়। সর্বশেষ তথ্যের জন্য কল করুন।
-        </p>
+    </section>
+
+    <!-- Specs Section -->
+    <section class="section-padding" id="specs">
+        <div class="container">
+            <div class="reveal section-title">
+                <span>SPECIFICATIONS</span>
+                <h2>সেমি কমপ্লিট ফ্লাট বিক্রয়ের বিবরণ</h2>
+            </div>
+            <div class="reveal specs-container">
+                <div class="spec-card developer">
+                    <h3 style="color:#065f46"><i class="fas fa-check-circle"></i> ডেভেলপার কোম্পানি করে দিবে</h3>
+                    <ul class="spec-list">
+                        <li><i class="fas fa-check" style="color:#10b981"></i> মূল বিল্ডিং স্ট্রাকচার (১০ তলা)</li>
+                        <li><i class="fas fa-check" style="color:#10b981"></i> ৩টি লিফট এবং ১টি জেনারেটর</li>
+                        <li><i class="fas fa-check" style="color:#10b981"></i> ৩টি সিঁড়ি (নিরাপত্তা সহ)</li>
+                        <li><i class="fas fa-check" style="color:#10b981"></i> ভবনের ভিতরে ও বাহিরে প্লাস্টার</li>
+                        <li><i class="fas fa-check" style="color:#10b981"></i> প্রতিটি দরজার চৌকাঠ</li>
+                        <li><i class="fas fa-check" style="color:#10b981"></i> জানালা ও বেলকনি গ্রীল</li>
+                        <li><i class="fas fa-check" style="color:#10b981"></i> ইলেকট্রিক কনসিল ওয়্যারিং (পাইপ)</li>
+                        <li><i class="fas fa-check" style="color:#10b981"></i> স্যানিটারি মেইন লাইন</li>
+                        <li><i class="fas fa-check" style="color:#10b981"></i> ভবনের মূল গেইট (Main Gate)</li>
+                    </ul>
+                </div>
+                <div class="spec-card buyer">
+                    <h3 style="color:#9a3412"><i class="fas fa-user-edit"></i> ক্রেতা নিজ খরচে করে নিবে</h3>
+                    <ul class="spec-list">
+                        <li><i class="fas fa-tools" style="color:#f59e0b"></i> ফ্ল্যাটের ভিতরের টাইলস ও ফিটিংস</li>
+                        <li><i class="fas fa-tools" style="color:#f59e0b"></i> স্যানিটারি ফিটিংস ও কল</li>
+                        <li><i class="fas fa-tools" style="color:#f59e0b"></i> দরজার পাল্লা</li>
+                        <li><i class="fas fa-tools" style="color:#f59e0b"></i> জানালার থাই গ্লাস</li>
+                        <li><i class="fas fa-tools" style="color:#f59e0b"></i> ফ্ল্যাটের ভিতরের রং (Paint)</li>
+                        <li><i class="fas fa-tools" style="color:#f59e0b"></i> ইলেকট্রিক ফিটিংস ও তার</li>
+                        <li style="font-weight:600;color:#ef4444"><i class="fas fa-info-circle"></i> বি:দ্র: গাড়ি পার্কিং আলাদা ক্রয় করতে হবে</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMI Banner -->
+    <div class="reveal container" style="text-align:center; margin-bottom:80px">
+        <div style="background:var(--primary); color:#fff; padding:40px; border-radius:12px">
+            <h2 style="color:var(--gold); margin-bottom:15px">সহজ কিস্তির সুবিধা</h2>
+            <p style="font-size:1.2rem; margin-bottom:20px">ডাউন পেমেন্ট দিয়ে বুকিং নিশ্চিত করুন এবং বাকি টাকা পরিশোধ করুন সহজ কিস্তিতে।</p>
+            <div style="font-size:1.5rem; font-weight:700; background:rgba(255,255,255,.1); display:inline-block; padding:10px 30px; border-radius:8px">৩৬ মাসের কিস্তি</div>
+        </div>
     </div>
-</section>
-    
-   <section class=section-padding id=specs>
-      <div class=container>
-         <div class="reveal section-title">
-            <span>SPECIFICATIONS</span>
-            <h2>সেমি কমপ্লিট ফ্লাট বিক্রয়ের বিবরণ</h2>
-         </div>
-         <div class="reveal specs-container">
-            <div class="spec-card developer">
-               <h3 style=color:#065f46><i class="fas fa-check-circle"></i> ডেভেলপার কোম্পানি করে দিবে</h3>
-               <ul class=spec-list>
-                  <li><i class="fas fa-check"style=color:#10b981></i> মূল বিল্ডিং স্ট্রাকচার (১০ তলা)
-                  <li><i class="fas fa-check"style=color:#10b981></i> ৩টি লিফট এবং ১টি জেনারেটর
-                  <li><i class="fas fa-check"style=color:#10b981></i> ৩টি সিঁড়ি (নিরাপত্তা সহ)
-                  <li><i class="fas fa-check"style=color:#10b981></i> ভবনের ভিতরে ও বাহিরে প্লাস্টার
-                  <li><i class="fas fa-check"style=color:#10b981></i> প্রতিটি দরজার চৌকাঠ
-                  <li><i class="fas fa-check"style=color:#10b981></i> জানালা ও বেলকনি গ্রীল
-                  <li><i class="fas fa-check"style=color:#10b981></i> ইলেকট্রিক কনসিল ওয়্যারিং (পাইপ)
-                  <li><i class="fas fa-check"style=color:#10b981></i> স্যানিটারি মেইন লাইন
-                  <li><i class="fas fa-check"style=color:#10b981></i> ভবনের মূল গেইট (Main Gate)
-               </ul>
-            </div>
-            <div class="spec-card buyer">
-               <h3 style=color:#9a3412><i class="fas fa-user-edit"></i> ক্রেতা নিজ খরচে করে নিবে</h3>
-               <ul class=spec-list>
-                  <li><i class="fas fa-tools"style=color:#f59e0b></i> ফ্ল্যাটের ভিতরের টাইলস ও ফিটিংস
-                  <li><i class="fas fa-tools"style=color:#f59e0b></i> স্যানিটারি ফিটিংস ও কল
-                  <li><i class="fas fa-tools"style=color:#f59e0b></i> দরজার পাল্লা
-                  <li><i class="fas fa-tools"style=color:#f59e0b></i> জানালার থাই গ্লাস
-                  <li><i class="fas fa-tools"style=color:#f59e0b></i> ফ্ল্যাটের ভিতরের রং (Paint)
-                  <li><i class="fas fa-tools"style=color:#f59e0b></i> ইলেকট্রিক ফিটিংস ও তার
-                  <li style=font-weight:600;color:#ef4444><i class="fas fa-info-circle"></i> বি:দ্র: গাড়ি পার্কিং আলাদা ক্রয় করতে হবে
-               </ul>
-            </div>
-         </div>
-      </div>
-      <div class="reveal ready-flat-notice">
-         <div class=notice-content>
-            <div class=notice-icon><i class="fas fa-bullhorn"></i></div>
-            <div class=notice-text>
-               <h3>রেডি ফ্ল্যাট বিক্রয় চলছে!</h3>
-               <p>সম্পূর্ণ প্রস্তুত (Ready) ফ্ল্যাটও বিক্রয় করা হয়। বিস্তারিত জানতে আজই যোগাযোগ করুন।
-            </div>
-         </div>
-         <a href=#contact class=btn-contact-outline>কল করুন</a>
-      </div>
-   </section>
-   <div class="reveal container"style=text-align:center;margin-bottom:80px>
-      <div style=background:var(--primary);color:#fff;padding:40px;border-radius:12px>
-         <h2 style=color:var(--gold);margin-bottom:15px>সহজ কিস্তির সুবিধা</h2>
-         <p style=font-size:1.2rem;margin-bottom:20px>ডাউন পেমেন্ট দিয়ে বুকিং নিশ্চিত করুন এবং বাকি টাকা পরিশোধ করুন সহজ কিস্তিতে।
-         <div style="font-size:1.5rem;font-weight:700;background:rgba(255,255,255,.1);display:inline-block;padding:10px 30px;border-radius:8px">৩৬ মাসের কিস্তি</div>
-      </div>
-   </div>
-   
-   <footer id="contact">
-    <div class="container">
-        <!-- Title -->
-        <div class="section-title" style="text-align:left; margin-bottom:40px;">
-            <span style="color:var(--gold)">CONTACT US</span>
-            <h2 style="color:#fff">আমাদের ঠিকানা ও যোগাযোগ</h2>
-        </div>
 
-        <!-- 4 Column Grid -->
-        <div class="footer-grid">
-            
-            <!-- 1. Corp Office -->
-            <div class="footer-box">
-                <h4>কর্পোরেট অফিস</h4>
-                <div class="contact-item">
-                    <i class="fas fa-building"></i>
-                    <div>
-                        <strong>মেসার্স মেঘনা স্টীল কর্ণার</strong><br>
-                        টেলিফোন অফিসের সামনে,<br>
-                        যশোর রোড, ভায়নামোড়, মাগুরা।
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="section-title" style="text-align:left; margin-bottom:40px;">
+                <span style="color:var(--gold)">CONTACT US</span>
+                <h2 style="color:#fff">আমাদের ঠিকানা ও যোগাযোগ</h2>
+            </div>
+
+            <div class="footer-grid">
+                <!-- Address Section (Combined) -->
+                <div class="footer-box">
+                    <h4>কর্পোরেট অফিস</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-building"></i>
+                        <div><strong>মেসার্স মেঘনা স্টীল কর্ণার</strong><br>টেলিফোন অফিসের সামনে,<br>যশোর রোড, ভায়নামোড়, মাগুরা।</div>
+                    </div>
+                    <br>
+                    <h4>শাখা অফিস</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div><strong>মেঘনা মান্নান টাওয়ার (গ্রাউন্ড ফ্লোর)</strong><br>থানার সামনে, কাউন্সিল পাড়া,<br>মাগুরা।</div>
                     </div>
                 </div>
-                             <h4>শাখা অফিস</h4>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <strong>মেঘনা মান্নান টাওয়ার (গ্রাউন্ড ফ্লোর)</strong><br>
-                        থানার সামনে, কাউন্সিল পাড়া,<br>
-                        মাগুরা।
-                    </div>
+
+                <!-- Contact Section -->
+                <div class="footer-box">
+                    <h4>সরাসরি যোগাযোগ</h4>
+                    <div class="contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:+8801819840987" style="color:#cbd5e1">+880 1819-840987</a></div>
+                    <div class="contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:+8801719195119" style="color:#cbd5e1">+880 1719-195119</a></div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i> <span>info@meghnabuilders.com</span></div>
+                </div>
+
+                <!-- Form Section -->
+                <div class="footer-box">
+                    <h4>কল ব্যাক রিকোয়েস্ট</h4>
+                    <form id="my-form" class="contact-form" action="https://formspree.io/f/mnnkddzy" method="POST">
+                        <input type="text" name="name" placeholder="আপনার নাম" required>
+                        <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
+                        <input type="hidden" name="_subject" value="New Call Back Request - Meghna Builders">
+                        <button type="submit" id="my-form-button">জমা দিন <i class="fas fa-paper-plane" style="margin-left:5px;"></i></button>
+                    </form>
+                    <p id="my-form-status" style="font-size:0.9rem; margin-top:10px;"></p>
+                    <p style="font-size:0.8rem; color:#64748b; margin-top:5px;">আপনার নম্বর দিন, আমরাই কল করবো।</p>
                 </div>
             </div>
 
-
-            <!-- 2. Phone/Email -->
-            <div class="footer-box">
-                <h4>সরাসরি যোগাযোগ</h4>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i> 
-                    <a href="tel:+8801819840987" style="color:#cbd5e1">+880 1819-840987</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i> 
-                    <a href="tel:+8801719195119" style="color:#cbd5e1">+880 1719-195119</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i> 
-                    <span>info@meghnabuilders.com</span>
-                </div>
-            </div>
-
-<!-- 4. Call Back Form (AJAX Version) -->
-            <div class="footer-box">
-                <h4>কল ব্যাক রিকোয়েস্ট</h4>
-                
-                <!-- Added ID "my-form" -->
-                <form id="my-form" class="contact-form" action="https://formspree.io/f/mnnkddzy" method="POST">
-                    
-                    <input type="text" name="name" placeholder="আপনার নাম" required>
-                    <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
-                    <input type="hidden" name="_subject" value="New Call Back Request - Meghna Builders">
-                    
-                    <button type="submit" id="my-form-button">জমা দিন <i class="fas fa-paper-plane" style="margin-left:5px;"></i></button>
-                </form>
-                
-                <!-- Status Message Area -->
-                <p id="my-form-status" style="font-size:0.9rem; margin-top:10px;"></p>
-
-                <p style="font-size:0.8rem; color:#64748b; margin-top:5px;">
-                    আপনার নম্বর দিন, আমরাই কল করবো।
-                </p>
-            </div>
-        
-
-    </div>
-            <!-- Copyright -->
             <div style="border-top:1px solid #334155; margin-top:50px; padding-top:20px; text-align:center; color:#64748b; font-size:0.9rem;">
-            © 2025 Meghna Home Builders Ltd. | All rights reserved.
+                © 2025 Meghna Home Builders Ltd. | All rights reserved.
+            </div>
         </div>
-</footer>
+    </footer>
 
-
-
-
-
-<script>
-    // 1. Scroll Reveal Animation
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    // Start observing existing elements
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-    // 2. SHOW MORE LOGIC (Fixed & Robust)
-    function showAllFlats() {
-        // Find the button
-        const btn = document.getElementById('showMoreBtn');
-        
-        // Find the hidden apartments
-        const hiddenFlats = document.querySelectorAll('.extra-flat');
-
-        // A. Hide the button immediately
-        if (btn) {
-            btn.style.display = 'none'; // Hides it visually
-        }
-
-        // B. Reveal the apartments
-        if (hiddenFlats.length > 0) {
-            hiddenFlats.forEach(flat => {
-                // 1. Remove the class that hides it
-                flat.classList.remove('hidden-flats');
-                
-                // 2. Force it to be visible (Grid item default)
-                flat.style.display = 'block'; // Or 'unset' to let Grid handle it
-                
-                // 3. Add animation classes
-                // We add 'reveal' so the Observer can pick it up, or just add 'active' directly
-                flat.classList.add('reveal');
-                
-                // Small delay to allow the browser to realize it's visible before animating
-                setTimeout(() => {
-                    flat.classList.add('active');
-                }, 50);
+    <!-- Scripts -->
+    <script>
+        // 1. Scroll Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
             });
-        } else {
-            console.error("No flats found with class .extra-flat");
-        }
-    }
+        }, { threshold: 0.1 });
 
-    // 3. Mobile Menu Toggle
-    function toggleMenu() {
-        const menu = document.getElementById('mobileMenu');
-        if (menu) {
-            menu.classList.toggle('active');
-        }
-    }
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-    // 4. Close menu when clicking links
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            const menu = document.getElementById('mobileMenu');
-            if (menu) menu.classList.remove('active');
-        });
-    });
-    
-    
-    
-    
-    // --- FORMSPREE AJAX SUBMISSION ---
-    var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-        event.preventDefault(); // This stops the redirect!
-        var status = document.getElementById("my-form-status");
-        var data = new FormData(event.target);
-        
-        fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
+        // 2. SHOW MORE LOGIC (Fixed & Robust)
+        function showAllFlats() {
+            const btn = document.getElementById('showMoreBtn');
+            const hiddenFlats = document.querySelectorAll('.extra-flat');
+
+            if (btn) {
+                btn.style.display = 'none';
+                btn.remove(); // Safely remove element
             }
-        }).then(response => {
-            if (response.ok) {
-                // Success Message (Green)
-                status.innerHTML = '<span style="color:#4ade80"><i class="fas fa-check-circle"></i> রিকোয়েস্ট পাঠানো হয়েছে!</span>';
-                form.reset(); // Clear the inputs
-            } else {
-                // Error Message (Red)
-                response.json().then(data => {
-                    if (Object.hasOwn(data, 'errors')) {
-                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-                    } else {
-                        status.innerHTML = '<span style="color:#f87171">সমস্যা হয়েছে, আবার চেষ্টা করুন।</span>';
-                    }
+
+            if (hiddenFlats.length > 0) {
+                hiddenFlats.forEach(flat => {
+                    flat.classList.remove('hidden-flats');
+                    flat.style.display = 'block';
+                    // Animation delay
+                    setTimeout(() => {
+                        flat.classList.add('reveal', 'active');
+                    }, 50);
                 });
             }
-        }).catch(error => {
-            status.innerHTML = '<span style="color:#f87171">ইন্টারনেট সংযোগ নেই।</span>';
+        }
+
+        // 3. Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) {
+                menu.classList.toggle('active');
+            }
+        }
+
+        // 4. Close menu when clicking links
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('mobileMenu');
+                if (menu) menu.classList.remove('active');
+            });
         });
-    }
-    
-    // Listen for the submit click
-    form.addEventListener("submit", handleSubmit);
-</script>
-   <script>// Prevent right-click
-     // document.addEventListener('contextmenu', e => e.preventDefault());
-      
-      // Prevent F12 & Ctrl+Shift+I
-     // document.addEventListener('keydown', e => {
-       //   if (e.key === "F12" || 
-         //    (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i')) {
-           //   e.preventDefault();
-        //  }
-     // });
-   </script>
+
+        // 5. AJAX FORM SUBMISSION
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+            event.preventDefault(); // Stop redirect
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = '<span style="color:#4ade80"><i class="fas fa-check-circle"></i> রিকোয়েস্ট পাঠানো হয়েছে!</span>';
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            status.innerHTML = '<span style="color:#f87171">সমস্যা হয়েছে, আবার চেষ্টা করুন।</span>';
+                        }
+                    });
+                }
+            }).catch(error => {
+                status.innerHTML = '<span style="color:#f87171">ইন্টারনেট সংযোগ নেই।</span>';
+            });
+        }
+        
+        if (form) {
+            form.addEventListener("submit", handleSubmit);
+        }
+    </script>
+</body>
+</html>
