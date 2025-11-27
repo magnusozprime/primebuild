@@ -1220,15 +1220,23 @@ h4 {
                 </div>
             </div>
 
-            <!-- 3. Call Back Form (New) -->
-            <div class="footer-box">
+<div class="footer-box">
                 <h4>কল ব্যাক রিকোয়েস্ট</h4>
-                <!-- Replace ACTION with your Formspree link later -->
-                <form class="contact-form" action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+                
+                <form class="contact-form" action="https://formspree.io/f/mnnkddzy" method="POST">
+                    
+                    <!-- Name Field -->
                     <input type="text" name="name" placeholder="আপনার নাম" required>
+                    
+                    <!-- Phone Field (Most Important) -->
                     <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
+                    
+                    <!-- Hidden Subject Line for your Email -->
+                    <input type="hidden" name="_subject" value="New Call Back Request - Meghna Builders">
+                    
                     <button type="submit">জমা দিন <i class="fas fa-paper-plane" style="margin-left:5px;"></i></button>
                 </form>
+                
                 <p style="font-size:0.8rem; color:#64748b; margin-top:10px;">
                     আপনার নম্বর দিন, আমরাই কল করবো।
                 </p>
@@ -1242,6 +1250,11 @@ h4 {
         </div>
     </div>
 </footer>
+
+
+
+
+
 <script>
     // 1. Scroll Reveal Animation
     const observer = new IntersectionObserver((entries) => {
