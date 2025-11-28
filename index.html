@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="মাগুরা শহরের প্রাণকেন্দ্রে ১০ তলা আধুনিক মেঘনা মান্নান টাওয়ার। ৩টি লিফট, কমিউনিটি হল, নিরাপত্তা ও পার্কিং সুবিধাসহ। আজই বুকিং করুন।">
     <!-- Social Media Sharing Meta Tags -->
     <meta property="og:title" content="Meghna Mannan Tower - Luxury Living in Magura">
@@ -114,7 +114,7 @@
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
                         <div class="price-box">মোট মূল্য: <span>4,676,000 BDT</span></div>
-                        <a href="#contact" class="btn-card-action">Contact Us</a>
+                        <a href="javascript:void(0)" onclick="contactForUnit('Unit A (1336 SFT)')" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
@@ -136,7 +136,7 @@
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
                         <div class="price-box">মোট মূল্য: <span>4,606,000 BDT</span></div>
-                        <a href="#contact" class="btn-card-action">Contact Us</a>
+                        <a href="javascript:void(0)" onclick="contactForUnit('Unit B (1316 SFT)')" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
@@ -158,7 +158,7 @@
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
                         <div class="price-box">মোট মূল্য: <span>5,049,000 BDT</span></div>
-                        <a href="#contact" class="btn-card-action">Contact Us</a>
+                        <a href="javascript:void(0)" onclick="contactForUnit('Unit C (1530 SFT)')" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
@@ -187,7 +187,7 @@
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
                         <div class="price-box">মোট মূল্য: <span>3,712,500 BDT</span></div>
-                        <a href="#contact" class="btn-card-action">Contact Us</a>
+                        <a href="javascript:void(0)" onclick="contactForUnit('Unit D (1125 SFT)')" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
@@ -209,7 +209,7 @@
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
                         <div class="price-box">মোট মূল্য: <span>3,564,000 BDT</span></div>
-                        <a href="#contact" class="btn-card-action">Contact Us</a>
+                        <a href="javascript:void(0)" onclick="contactForUnit('Unit E (1080 SFT)')" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
@@ -231,7 +231,7 @@
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
                         <div class="price-box">মোট মূল্য: <span>4,118,400 BDT</span></div>
-                        <a href="#contact" class="btn-card-action">Contact Us</a>
+                        <a href="javascript:void(0)" onclick="contactForUnit('Unit F (1248 SFT)')" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
@@ -253,7 +253,7 @@
                             <li><span><i class="fas fa-utensils"></i> কিচেন:</span> <span>১টি</span></li>
                         </ul>
                         <div class="price-box">মোট মূল্য: <span>4,644,500 BDT</span></div>
-                        <a href="#contact" class="btn-card-action">Contact Us</a>
+                        <a href="javascript:void(0)" onclick="contactForUnit('Unit G (1327 SFT)')" class="btn-card-action">Contact Us</a>
                     </div>
                 </div>
 
@@ -441,11 +441,27 @@
                 <div class="footer-box">
                     <h4>কল ব্যাক রিকোয়েস্ট</h4>
                     <form id="my-form" class="contact-form" action="https://formspree.io/f/mnnkddzy" method="POST">
-                        <input type="text" name="name" placeholder="আপনার নাম" required>
-                        <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
-                        <input type="hidden" name="_subject" value="New Call Back Request - Meghna Builders">
-                        <button type="submit" id="my-form-button">জমা দিন <i class="fas fa-paper-plane" style="margin-left:5px;"></i></button>
-                    </form>
+    
+    <input type="text" name="name" placeholder="আপনার নাম" required>
+    
+    <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
+    
+    <!-- NEW DROPDOWN MENU -->
+    <select name="interested_unit" id="unit-selector">
+        <option value="General Query">আপনি কোন ফ্ল্যাটে আগ্রহী?</option>
+        <option value="Unit A (1336 SFT)">ইউনিট A (1336 SFT)</option>
+        <option value="Unit B (1316 SFT)">ইউনিট B (1316 SFT)</option>
+        <option value="Unit C (1530 SFT)">ইউনিট C (1530 SFT)</option>
+        <option value="Unit D (1125 SFT)">ইউনিট D (1125 SFT)</option>
+        <option value="Unit E (1080 SFT)">ইউনিট E (1080 SFT)</option>
+        <option value="Unit F (1248 SFT)">ইউনিট F (1248 SFT)</option>
+        <option value="Unit G (1327 SFT)">ইউনিট G (1327 SFT)</option>
+    </select>
+
+    <input type="hidden" name="_subject" value="New Call Back Request - Meghna Builders">
+    
+    <button type="submit" id="my-form-button">জমা দিন <i class="fas fa-paper-plane" style="margin-left:5px;"></i></button>
+</form>
                     <p id="my-form-status" style="font-size:0.9rem; margin-top:10px;"></p>
                     <p style="font-size:0.8rem; color:#64748b; margin-top:5px;">আপনার নম্বর দিন, আমরাই কল করবো।</p>
                 </div>
@@ -458,6 +474,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
