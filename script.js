@@ -135,3 +135,21 @@
 
     // Run this function immediately when page loads
     updateFlatCounts();
+
+
+
+    // 7. AUTO SELECT UNIT IN FORM
+    function contactForUnit(unitName) {
+        // 1. Find the dropdown
+        const selector = document.getElementById('unit-selector');
+        
+        // 2. Set the value
+        if (selector) {
+            selector.value = unitName;
+        }
+
+        // 3. Scroll smoothly to the contact section
+        document.getElementById('contact').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
