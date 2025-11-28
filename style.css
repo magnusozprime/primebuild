@@ -123,6 +123,30 @@
         .contact-item { display: flex; gap: 15px; margin-bottom: 15px; color: #cbd5e1 }
         .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 4px; border: 1px solid #334155; background: rgba(255, 255, 255, 0.05); color: white; font-family: var(--font-bn); outline: none; font-size: 0.95rem; }
         .contact-form input:focus { border-color: var(--gold); background: rgba(255, 255, 255, 0.1); }
+        /* --- FORM DROPDOWN STYLE --- */
+.contact-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #334155;
+    background: rgba(255, 255, 255, 0.05);
+    color: white; /* Text color */
+    font-family: var(--font-bn);
+    outline: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.contact-form select option {
+    background: var(--primary); /* Dark background for options */
+    color: white;
+}
+
+.contact-form select:focus {
+    border-color: var(--gold);
+    background: rgba(255, 255, 255, 0.1);
+}
         .contact-form button { width: 100%; background: var(--gold); color: white; border: none; padding: 12px; font-weight: 700; cursor: pointer; border-radius: 4px; font-family: var(--font-bn); }
         .contact-form button:hover { background: var(--gold-hover); }
 
